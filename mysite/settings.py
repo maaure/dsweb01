@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-0zl-&p(9qfkyp1dkuwzf3r+o*cbzi%iv7)f%_i25-@mnw7!%fh
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['maure.pythonanywhere.com']
+ALLOWED_HOSTS = ['maure.pythonanywhere.com','localhost']
+CSRF_TRUSTED_ORIGINS = ['https://maure.pythonanywhere.com','https://maaure-ideal-dollop-7v4wg4gpgpwh66-8000.preview.app.github.dev']
 
 
 # Application definition
@@ -37,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'polls'
 ]
 
 MIDDLEWARE = [
