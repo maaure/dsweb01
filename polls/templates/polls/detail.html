@@ -1,0 +1,6 @@
+<h1>{{ pergunta.question_text }}</h1>
+<ul>
+    {% for alternativa in pergunta.alternativa_set.all %}
+    <li>{{ alternativa.texto }}</li>
+    {% endfor %}
+</ul>
