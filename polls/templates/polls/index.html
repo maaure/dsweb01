@@ -1,7 +1,7 @@
 {% if ultimas_questoes_cadastradas %}
     <ul>
     {% for pergunta in ultimas_questoes_cadastradas %}
-        <li><a href="{% url 'detail' pergunta.id %}">{{ pergunta.texto }}</a></li>
+        <li><a href="{% url 'polls:detail' pergunta.id %}">{{ pergunta.texto }}</a></li>
     {% endfor %}
     </ul>
 {% else %}
