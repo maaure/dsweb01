@@ -1,8 +1,8 @@
 <h1>{{ pergunta.pergunta_text }}</h1>
 
 <ul>
-{% for alternativa in pergunta.alternativa_set.all %}
-    <li>{{ alternativa.texto }} -- {{ alternativa.votos }} vote{{ alternativa.votos|pluralize }}</li>
+{% for alternativa in pergunta.alternativas_ordenadas %}
+    <li>{{ alternativa.texto }} -- {{ alternativa.votos }} voto{{ alternativa.votos|pluralize }} ({{ alternativa.porcentagem }})</li>
 {% endfor %}
 </ul>
 
