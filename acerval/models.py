@@ -3,16 +3,15 @@ from django.contrib.auth.models import User
 
 class Usuario(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    nome = models.TextField(max_length=100)
     cpf = models.TextField(max_length=11)
 
     def __str__(self):
         return "{0} - {1}".format(self.nome, self.cpf)
 
 class Contato(models.Model):
+    contato_de = models.OneToOneField(Usuario, on_delete=models.CASCADE)
     email = models.EmailField(max_length=254)
-    usuario = models.OneToOneField(Usuario, on_delete=models.CASCADE)
-    
+
     def __str__(self):
         return "{0}: {1}".format(self.usuario.nome, self.email)
 
