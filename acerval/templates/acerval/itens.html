@@ -1,5 +1,6 @@
-{% extends "index.html" %} {% block content %}
-<div class="card-body">
+{% extends "acerval/base.html" %} {% block content %}
+{% include 'acerval/navbar.html'%}
+<div class="container my-5">
   <h4>Lista de Itens</h4>
   <table class="table">
     <thead>
@@ -15,19 +16,13 @@
         <td>{{ item.name }}</td>
         <td>{{ item.description }}</td>
         <td>
-          <a type="button" class="btn btn-warning" href="/update-form/{{ item.id }}"
-            >Atualizar</a
-          >
-          <a type="button" class="btn btn-danger" href="/delete/{{ item.id }}"
-            >Deletar</a
-          >
+          <a type="button" class="btn btn-warning" href="#">Atualizar</a>
+          <a type="button" class="btn btn-danger" href="/delete/{{ item.id }}">Deletar</a>
         </td>
       </tr>
       {% endfor %}
     </tbody>
   </table>
-  <a type="button" class="btn btn-success" href="/form/"
-    >Cadastrar</a
-  >
+  <a type="button" class="btn btn-success" href="/form/">Cadastrar</a>
 </div>
 {% endblock %}

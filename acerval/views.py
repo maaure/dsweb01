@@ -10,3 +10,11 @@ class IndexView(View):
 class LoginView(View):
     def get(self, request, *args, **kwargs):
         return render(request, 'acerval/login.html', {'titulo': 'Titulo muito massa pô!'})
+
+class ItemView(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, 'acerval/itens.html', {'titulo': 'Titulo muito massa pô!'})
+
+class ContatoView(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, 'acerval/contatos.html', {'titulo': 'Titulo muito massa pô!'})

@@ -1,0 +1,28 @@
+{% extends "acerval/base.html" %} {% block content %}
+{% include 'acerval/navbar.html'%}
+<div class="container my-5">
+  <h4>Lista de Contatos</h4>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Título</th>
+        <th scope="col">Descrição</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in itens %}
+      <tr>
+        <td>{{ item.name }}</td>
+        <td>{{ item.description }}</td>
+        <td>
+          <a type="button" class="btn btn-warning" href="#">Atualizar</a>
+          <a type="button" class="btn btn-danger" href="/delete/{{ item.id }}">Deletar</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <a type="button" class="btn btn-success" href="/form/">Cadastrar</a>
+</div>
+{% endblock %}
