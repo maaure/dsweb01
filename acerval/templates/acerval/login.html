@@ -1,0 +1,27 @@
+{% extends "acerval/base.html" %} {% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-3 col-md-5">
+            <h1>Login</h1>
+            <form>
+                <div class="form-group">
+                    <label for="id_username">Usuário:</label>
+                    <input type="text" class="form-control" id="id_username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="id_password">Senha:</label>
+                    <input type="password" class="form-control" id="id_password" name="password" required>
+                </div>
+                <div class="row justify-content-between">
+                    <div class="col-6">
+                        <button type="submit" class="btn btn-outline-secondary w-100">Cadastrar</button>
+                    </div>
+                    <div class="col-6">
+                        <button type="submit" class="btn btn-primary w-100">Confirmar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

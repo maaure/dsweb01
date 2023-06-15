@@ -1,0 +1,33 @@
+{% extends "index.html" %} {% block content %}
+<div class="card-body">
+  <h4>Lista de Itens</h4>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Título</th>
+        <th scope="col">Descrição</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in itens %}
+      <tr>
+        <td>{{ item.name }}</td>
+        <td>{{ item.description }}</td>
+        <td>
+          <a type="button" class="btn btn-warning" href="/update-form/{{ item.id }}"
+            >Atualizar</a
+          >
+          <a type="button" class="btn btn-danger" href="/delete/{{ item.id }}"
+            >Deletar</a
+          >
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <a type="button" class="btn btn-success" href="/form/"
+    >Cadastrar</a
+  >
+</div>
+{% endblock %}
