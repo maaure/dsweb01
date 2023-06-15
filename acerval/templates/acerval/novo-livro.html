@@ -1,0 +1,28 @@
+{% extends "acerval/base.html" %} {% block content %}
+{% include "acerval/navbar.html" %}
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-5">
+            <h1>Cadastrar novo livro</h1>
+            <form action="{% url 'acerval:novo-livro' %}" method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="id_titulo">Título:</label>
+                    <input type="text" class="form-control" id="id_titulo" name="titulo" required>
+                </div>
+                <div class="form-group">
+                    <label for="id_autor">Autor:</label>
+                    <input type="text" class="form-control" id="id_autor" name="autor" required>
+                </div>
+                <div class="form-group">
+                    <label for="id_ano">Ano:</label>
+                    <input type="number" class="form-control" id="id_ano" name="ano" required>
+                </div>
+                <div class="row justify-content-end m-0">
+                    <button type="submit" class="btn btn-primary ">Confirmar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
