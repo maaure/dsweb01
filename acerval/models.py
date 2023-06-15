@@ -5,14 +5,14 @@ class Usuario(models.Model):
     cpf = models.TextField(max_length=11)
 
     def __str__(self):
-        return "{0} - {1}".format(nome, cpf)
+        return "{0} - {1}".format(self.nome, self.cpf)
 
 class Contato(models.Model):
     email = models.EmailField(max_length=254)
     usuario = models.OneToOneField(Usuario, on_delete=models.CASCADE)
     
     def __str__(self):
-        return "{0}: {1}".format(usuario.nome, self.email)
+        return "{0}: {1}".format(self.usuario.nome, self.email)
 
 class Item(models.Model):
     dono = models.ForeignKey(Usuario, on_delete=models.CASCADE)
