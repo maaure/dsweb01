@@ -17,6 +17,7 @@ ALLOWED_HOSTS = ['maure.pythonanywhere.com','localhost', '127.0.0.1']
 CSRF_TRUSTED_ORIGINS = ['https://maure.pythonanywhere.com','https://maaure-ideal-dollop-7v4wg4gpgpwh66-8000.preview.app.github.dev']
 
 
+
 # Application definition
 
 INSTALLED_APPS = [
