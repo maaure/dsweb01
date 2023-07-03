@@ -14,7 +14,7 @@ SECRET_KEY = 'django-insecure-0zl-&p(9qfkyp1dkuwzf3r+o*cbzi%iv7)f%_i25-@mnw7!%fh
 DEBUG = True
 
 ALLOWED_HOSTS = ['maure.pythonanywhere.com','localhost', '127.0.0.1']
-CSRF_TRUSTED_ORIGINS = ['https://maure.pythonanywhere.com','https://maaure-ideal-dollop-7v4wg4gpgpwh66-8000.preview.app.github.dev']
+CSRF_TRUSTED_ORIGINS = ['https://maure.pythonanywhere.com','https://maaure-literate-system-4j96x9xwpr5fj4qr-8000.preview.app.github.dev']
 
 
 

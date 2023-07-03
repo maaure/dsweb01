@@ -9,7 +9,7 @@ class Usuario(models.Model):
         return "{0}".format(self.user.username)
 
 class Contato(models.Model):
-    contato_de = models.OneToOneField(Usuario, on_delete=models.CASCADE)
+    contato_de = models.ForeignKey(Usuario, on_delete=models.CASCADE)
     email = models.EmailField(max_length=254)
 
     def __str__(self):
@@ -17,7 +17,7 @@ class Contato(models.Model):
 
 class Item(models.Model):
     dono = models.ForeignKey(Usuario, on_delete=models.CASCADE)
-    emprestado_para = models.ForeignKey(Contato, on_delete=models.CASCADE)
+    emprestado_para = models.ForeignKey(Contato, on_delete=models.SET_NULL, blank=True, null=True)
 
 class Objeto(Item):
     nome = models.TextField(max_length=100)
