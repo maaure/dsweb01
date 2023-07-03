@@ -21,14 +21,15 @@ CSRF_TRUSTED_ORIGINS = ['https://maure.pythonanywhere.com','https://maaure-ideal
 # Application definition
 
 INSTALLED_APPS = [
+    'main.apps.MainConfig',
+    'acerval.apps.AcervalConfig',
+    'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'polls',
-    'acerval'
 ]
 
 MIDDLEWARE = [
